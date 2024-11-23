@@ -1,4 +1,3 @@
-![AboutPage](https://github.com/user-attachments/assets/383139f0-7b24-4090-a6f3-47c5925c1493)# Weather Task
 
 This is a simple weather app that fetches data from a weather API and displays the current weather.
 
