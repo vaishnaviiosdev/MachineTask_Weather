@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mPh-sd-dzF">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clouds_Sun" translatesAutoresizingMaskIntoConstraints="NO" id="6gk-Mh-NVd">
+                                        <rect key="frame" x="96.666666666666686" y="259.66666666666669" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="UiN-u1-0qT"/>
+                                            <constraint firstAttribute="width" constant="200" id="aya-Iq-ODT"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRR-jV-vQe">
+                                        <rect key="frame" x="20" y="479.66666666666663" width="353" height="19"/>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="App_Blue"/>
+                                <constraints>
+                                    <constraint firstItem="6gk-Mh-NVd" firstAttribute="centerY" secondItem="mPh-sd-dzF" secondAttribute="centerY" constant="-20" id="0hL-pQ-Jjn"/>
+                                    <constraint firstAttribute="trailing" secondItem="mRR-jV-vQe" secondAttribute="trailing" constant="20" id="Hfv-Ne-JLO"/>
+                                    <constraint firstItem="mRR-jV-vQe" firstAttribute="centerX" secondItem="6gk-Mh-NVd" secondAttribute="centerX" id="bki-JV-FYH"/>
+                                    <constraint firstItem="mRR-jV-vQe" firstAttribute="top" secondItem="6gk-Mh-NVd" secondAttribute="bottom" constant="20" id="fr9-0U-41v"/>
+                                    <constraint firstItem="mRR-jV-vQe" firstAttribute="leading" secondItem="mPh-sd-dzF" secondAttribute="leading" constant="20" id="g2i-qr-s96"/>
+                                    <constraint firstItem="6gk-Mh-NVd" firstAttribute="centerX" secondItem="mPh-sd-dzF" secondAttribute="centerX" id="ruH-70-SfI"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="App_Blue"/>
+                        <constraints>
+                            <constraint firstItem="mPh-sd-dzF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Dv4-kN-uYK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mPh-sd-dzF" secondAttribute="trailing" id="Qav-rN-SOu"/>
+                            <constraint firstItem="mPh-sd-dzF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kfo-Jz-xZX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mPh-sd-dzF" secondAttribute="bottom" id="xGQ-Nf-unQ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="clouds_Sun" width="512" height="512"/>
+        <namedColor name="App_Blue">
+            <color red="0.13699999451637268" green="0.6119999885559082" blue="0.85399997234344482" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
