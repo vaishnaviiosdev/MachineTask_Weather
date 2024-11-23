@@ -8,7 +8,7 @@ Here are the screenshots of the app's main screens:
 
 ### Initial Screen
 
-![Initial Screen](screenshots/InitialPage.png)
+![Initial Screen](InitialPage.png)
 
 ### About Screen
 
