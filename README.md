@@ -21,4 +21,6 @@ This is a simple weather app that fetches data from a weather API and displays t
 
 ### Notification Page
 
+![Simulator Screenshot - iPhone SE (3rd generation) - 2024-11-24 at 20 46 53](https://github.com/user-attachments/assets/dfc77489-f77e-4794-a9bd-c344a632bdc8)
+
 
