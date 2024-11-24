@@ -12,7 +12,7 @@ class ResultViewController: UIViewController, CLLocationManagerDelegate {
     
     var latitude: String?
     var longitude: String?
-    var urlString:String?
+    var urlString:String!
     var locationManager: CLLocationManager!
     
     @IBOutlet weak var weatherImgView: UIImageView!
@@ -96,14 +96,14 @@ class ResultViewController: UIViewController, CLLocationManagerDelegate {
     func setWeatherIcon(for condition: String) {
         var iconName: String
         
-        switch condition {
-        case "rain","Rain":
+        switch condition.lowercased() {
+        case "rain":
             iconName = "cloud.rain.fill"
-        case "clear","Clear":
+        case "clear":
             iconName = "sun.max.fill"
-        case "cloud","Clouds":
+        case "cloud":
             iconName = "cloud.fill"
-        case "snow","Snow":
+        case "snow":
             iconName = "cloud.snow.fill"
         default:
             iconName = "cloud.fill" // Default icon
@@ -117,7 +117,7 @@ class ResultViewController: UIViewController, CLLocationManagerDelegate {
         
         if let date = inputDateFormatter.date(from: dateString) {
             let outputDateFormatter = DateFormatter()
-            outputDateFormatter.dateFormat = "dd-MM-yy, EEEE"   // Output format with day
+            outputDateFormatter.dateFormat = "dd MMM yyyy, hh:mm a"//"dd-MM-yy, EEEE"   // Output format with day
             let formattedDate = outputDateFormatter.string(from: date)
             print("The formattedDate is \(formattedDate)")
             return formattedDate

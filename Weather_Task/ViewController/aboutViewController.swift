@@ -10,15 +10,16 @@ import UIKit
 class aboutViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
-
+    @IBOutlet weak var waetherDescLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.waetherDescLabel.text = weatherDescription
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         self.loadContent()
     }
     
     func loadContent() {
-        let imageUrlString = "https://img.freepik.com/premium-vector/cute-smiling-sun-vector-icon_197792-591.jpg"
         if let url = URL(string: imageUrlString) {
             downloadImage(from: url)
         }
@@ -26,6 +27,7 @@ class aboutViewController: UIViewController {
     
     func downloadImage(from url: URL) {
         let task = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
+            print("The response is \(data)")
             if let data = data, let image = UIImage(data: data) {
                 DispatchQueue.main.async {
                     self?.imageView.image = image

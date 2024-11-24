@@ -19,23 +19,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M44-EO-ijS">
-                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sky_potrait" translatesAutoresizingMaskIntoConstraints="NO" id="K63-gH-Kjh">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                    </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clouds_Sun" translatesAutoresizingMaskIntoConstraints="NO" id="Bew-mf-GlZ">
-                                        <rect key="frame" x="96.666666666666686" y="217.66666666666669" width="200" height="200"/>
+                                        <rect key="frame" x="96.666666666666686" y="286" width="200" height="200"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="cGu-Pq-d8K"/>
                                             <constraint firstAttribute="height" constant="200" id="fCa-bA-iFC"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Welcome to the Weather App!&quot;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDX-mP-R9b">
-                                        <rect key="frame" x="20" y="437.66666666666663" width="353" height="19"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your quick weather report" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDX-mP-R9b">
+                                        <rect key="frame" x="20" y="506" width="353" height="19"/>
                                         <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dGX-YI-h6F">
-                                        <rect key="frame" x="20" y="536.66666666666663" width="353" height="120"/>
+                                        <rect key="frame" x="20" y="692" width="353" height="120"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Lq-5p-YLA">
                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="50"/>
@@ -83,14 +86,18 @@
                                 <color key="backgroundColor" name="App_Blue"/>
                                 <constraints>
                                     <constraint firstItem="Bew-mf-GlZ" firstAttribute="centerX" secondItem="M44-EO-ijS" secondAttribute="centerX" id="3T4-vn-GJg"/>
+                                    <constraint firstAttribute="bottom" secondItem="K63-gH-Kjh" secondAttribute="bottom" id="4hL-fi-p7b"/>
+                                    <constraint firstItem="K63-gH-Kjh" firstAttribute="top" secondItem="M44-EO-ijS" secondAttribute="top" id="5hQ-xG-8oZ"/>
                                     <constraint firstItem="MDX-mP-R9b" firstAttribute="centerX" secondItem="Bew-mf-GlZ" secondAttribute="centerX" id="7uK-K7-wAn"/>
                                     <constraint firstItem="MDX-mP-R9b" firstAttribute="top" secondItem="Bew-mf-GlZ" secondAttribute="bottom" constant="20" id="9H9-hF-5QI"/>
                                     <constraint firstItem="Bew-mf-GlZ" firstAttribute="centerY" secondItem="M44-EO-ijS" secondAttribute="centerY" constant="-40" id="9PA-u1-clf"/>
+                                    <constraint firstItem="K63-gH-Kjh" firstAttribute="leading" secondItem="M44-EO-ijS" secondAttribute="leading" id="Aig-gm-kj2"/>
                                     <constraint firstItem="MDX-mP-R9b" firstAttribute="leading" secondItem="M44-EO-ijS" secondAttribute="leading" constant="20" id="BVT-st-oNV"/>
-                                    <constraint firstItem="dGX-YI-h6F" firstAttribute="top" secondItem="MDX-mP-R9b" secondAttribute="bottom" constant="80" id="D4H-vz-XmS"/>
                                     <constraint firstAttribute="trailing" secondItem="dGX-YI-h6F" secondAttribute="trailing" constant="20" id="E16-Aq-Hrz"/>
                                     <constraint firstAttribute="trailing" secondItem="MDX-mP-R9b" secondAttribute="trailing" constant="20" id="T6d-6d-SWR"/>
                                     <constraint firstItem="dGX-YI-h6F" firstAttribute="leading" secondItem="M44-EO-ijS" secondAttribute="leading" constant="20" id="nAW-h5-ysv"/>
+                                    <constraint firstAttribute="trailing" secondItem="K63-gH-Kjh" secondAttribute="trailing" id="u91-rD-0eC"/>
+                                    <constraint firstAttribute="bottom" secondItem="dGX-YI-h6F" secondAttribute="bottom" constant="40" id="zPK-6D-3ef"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -99,8 +106,8 @@
                         <constraints>
                             <constraint firstItem="M44-EO-ijS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1hc-aq-rG7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="M44-EO-ijS" secondAttribute="trailing" id="5yl-CJ-G5a"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="M44-EO-ijS" secondAttribute="bottom" id="Ucg-Y5-w0j"/>
-                            <constraint firstItem="M44-EO-ijS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Y5J-4w-iS7"/>
+                            <constraint firstItem="M44-EO-ijS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8cc-Ie-1eF"/>
+                            <constraint firstAttribute="bottom" secondItem="M44-EO-ijS" secondAttribute="bottom" id="RuF-Zx-u9y"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lTI-DU-Ses"/>
@@ -159,10 +166,10 @@
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="689"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XkZ-xM-Hzp">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="1808.3333333333333"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="280"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EXI-PM-JuE">
-                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1788.3333333333333"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="260"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C7r-04-OUy">
                                                                 <rect key="frame" x="50" y="30" width="293" height="200"/>
@@ -170,19 +177,8 @@
                                                                     <constraint firstAttribute="height" constant="200" id="0tt-Wf-xOW"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rpB-Mm-gbN">
-                                                                <rect key="frame" x="10" y="250" width="373" height="1528.3333333333333"/>
-                                                                <string key="text">A weather app serves as a valuable tool for users who want to stay informed about the current weather conditions and forecast for any given location. The primary function of such an app is to provide real-time data on various weather parameters like temperature, humidity, wind speed, and air pressure, while also offering future weather predictions based on available meteorological data. Most modern weather apps pull this information from global weather services, using data from satellites, radar systems, and weather stations, which are then processed and presented to the user in an easy-to-understand format.
-
-For example, a typical weather app will display the current temperature and weather status for your location, showing whether it's sunny, cloudy, rainy, or snowy. Additionally, it might provide a five-day forecast, giving users an idea of what weather to expect in the coming days. Many apps also offer specialized features like radar maps, which allow users to track weather patterns like storms or precipitation, and notifications that alert them to any significant weather changes, such as severe weather warnings.
-
-The interface of a weather app is usually designed to be clean and user-friendly. Many apps use intuitive icons and color schemes to convey the current weather conditions quickly—for instance, a bright sun icon to indicate sunny weather or a raindrop icon for precipitation. Additionally, advanced weather apps may include interactive maps, charts, and graphs that show hourly forecasts, historical weather data, or even air quality indexes.
-
-Some weather apps also offer additional functionalities like integration with the user's calendar or smart devices. For instance, if you're planning an outdoor event, the app might suggest the best time for it based on the expected weather. Furthermore, apps like these often use geolocation to give users weather information for their exact location, but they also allow you to check the weather for any city or area around the world.
-
-In terms of development, a weather app can be relatively simple or highly sophisticated, depending on the features it offers. While basic weather apps focus primarily on providing accurate forecasts, more advanced ones might incorporate machine learning models to predict microclimates or suggest personalized weather advice based on the user's behavior, location, and preferences. For example, if the app notices that you tend to go jogging in the mornings, it might notify you of an impending rainstorm or advise you on the best time to go outside based on your typical activity patterns.
-
-Ultimately, a good weather app offers convenience, timely information, and personalized features that make staying on top of the weather easier and more reliable for its users. Whether it's helping someone plan their day, stay safe during a storm, or simply satisfy their curiosity about what the weather is like in another part of the world, these apps are an indispensable tool in modern life.</string>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rpB-Mm-gbN">
+                                                                <rect key="frame" x="10" y="250" width="373" height="0.0"/>
                                                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="18"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -241,7 +237,8 @@ Ultimately, a good weather app offers convenience, timely information, and perso
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="C7r-04-OUy" id="2Su-3W-lgg"/>
+                        <outlet property="imageView" destination="C7r-04-OUy" id="2qw-oV-WFP"/>
+                        <outlet property="waetherDescLabel" destination="rpB-Mm-gbN" id="90p-wS-sXe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uwl-UA-Yrl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -329,13 +326,13 @@ Ultimately, a good weather app offers convenience, timely information, and perso
                                         <rect key="frame" x="0.0" y="80" width="393" height="679"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="c2S-fH-nUJ">
-                                                <rect key="frame" x="10" y="20" width="373" height="265"/>
+                                                <rect key="frame" x="10" y="20" width="373" height="241"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QMW-tO-ee7">
-                                                        <rect key="frame" x="0.0" y="0.0" width="373" height="130"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="373" height="118"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usM-tS-7PZ">
-                                                                <rect key="frame" x="20" y="20" width="333" height="30"/>
+                                                                <rect key="frame" x="10" y="20" width="353" height="30"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="30" id="UKw-8V-hyE"/>
                                                                 </constraints>
@@ -344,7 +341,7 @@ Ultimately, a good weather app offers convenience, timely information, and perso
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gJ3-ag-9SU">
-                                                                <rect key="frame" x="20" y="70" width="333" height="40"/>
+                                                                <rect key="frame" x="10" y="58" width="353" height="40"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="40" id="3tK-Nb-jKZ"/>
@@ -356,13 +353,13 @@ Ultimately, a good weather app offers convenience, timely information, and perso
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="viewFlipsideBackgroundColor"/>
                                                         <constraints>
-                                                            <constraint firstItem="gJ3-ag-9SU" firstAttribute="top" secondItem="usM-tS-7PZ" secondAttribute="bottom" constant="20" id="2WD-Pn-KGX"/>
-                                                            <constraint firstItem="gJ3-ag-9SU" firstAttribute="leading" secondItem="QMW-tO-ee7" secondAttribute="leading" constant="20" id="98A-zm-LTg"/>
-                                                            <constraint firstItem="usM-tS-7PZ" firstAttribute="leading" secondItem="QMW-tO-ee7" secondAttribute="leading" constant="20" id="9gH-SA-Mdi"/>
+                                                            <constraint firstItem="gJ3-ag-9SU" firstAttribute="top" secondItem="usM-tS-7PZ" secondAttribute="bottom" constant="8" id="2WD-Pn-KGX"/>
+                                                            <constraint firstItem="gJ3-ag-9SU" firstAttribute="leading" secondItem="QMW-tO-ee7" secondAttribute="leading" constant="10" id="98A-zm-LTg"/>
+                                                            <constraint firstItem="usM-tS-7PZ" firstAttribute="leading" secondItem="QMW-tO-ee7" secondAttribute="leading" constant="10" id="9gH-SA-Mdi"/>
                                                             <constraint firstItem="usM-tS-7PZ" firstAttribute="top" secondItem="QMW-tO-ee7" secondAttribute="top" constant="20" id="StT-Sy-70D"/>
                                                             <constraint firstAttribute="bottom" secondItem="gJ3-ag-9SU" secondAttribute="bottom" constant="20" id="V7D-dr-Bkx"/>
-                                                            <constraint firstAttribute="trailing" secondItem="usM-tS-7PZ" secondAttribute="trailing" constant="20" id="bap-TZ-MAp"/>
-                                                            <constraint firstAttribute="trailing" secondItem="gJ3-ag-9SU" secondAttribute="trailing" constant="20" id="egs-MQ-aIl"/>
+                                                            <constraint firstAttribute="trailing" secondItem="usM-tS-7PZ" secondAttribute="trailing" constant="10" id="bap-TZ-MAp"/>
+                                                            <constraint firstAttribute="trailing" secondItem="gJ3-ag-9SU" secondAttribute="trailing" constant="10" id="egs-MQ-aIl"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -371,10 +368,10 @@ Ultimately, a good weather app offers convenience, timely information, and perso
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="208-ey-bVQ">
-                                                        <rect key="frame" x="0.0" y="135" width="373" height="130"/>
+                                                        <rect key="frame" x="0.0" y="123" width="373" height="118"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ED-A4-Yjr">
-                                                                <rect key="frame" x="20" y="20" width="333" height="30"/>
+                                                                <rect key="frame" x="10" y="20" width="353" height="30"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="30" id="OF4-Se-n1d"/>
                                                                 </constraints>
@@ -383,7 +380,7 @@ Ultimately, a good weather app offers convenience, timely information, and perso
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7XF-Mx-zhh">
-                                                                <rect key="frame" x="20" y="70" width="333" height="40"/>
+                                                                <rect key="frame" x="10" y="58" width="353" height="40"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="40" id="102-50-cJv"/>
                                                                 </constraints>
@@ -394,12 +391,12 @@ Ultimately, a good weather app offers convenience, timely information, and perso
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="viewFlipsideBackgroundColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="trailing" secondItem="7XF-Mx-zhh" secondAttribute="trailing" constant="20" id="5z6-dS-KXW"/>
-                                                            <constraint firstAttribute="trailing" secondItem="3ED-A4-Yjr" secondAttribute="trailing" constant="20" id="Eec-Ko-dHm"/>
-                                                            <constraint firstItem="3ED-A4-Yjr" firstAttribute="leading" secondItem="208-ey-bVQ" secondAttribute="leading" constant="20" id="G2l-3g-ze7"/>
-                                                            <constraint firstItem="7XF-Mx-zhh" firstAttribute="leading" secondItem="208-ey-bVQ" secondAttribute="leading" constant="20" id="V3m-n5-5Zx"/>
+                                                            <constraint firstAttribute="trailing" secondItem="7XF-Mx-zhh" secondAttribute="trailing" constant="10" id="5z6-dS-KXW"/>
+                                                            <constraint firstAttribute="trailing" secondItem="3ED-A4-Yjr" secondAttribute="trailing" constant="10" id="Eec-Ko-dHm"/>
+                                                            <constraint firstItem="3ED-A4-Yjr" firstAttribute="leading" secondItem="208-ey-bVQ" secondAttribute="leading" constant="10" id="G2l-3g-ze7"/>
+                                                            <constraint firstItem="7XF-Mx-zhh" firstAttribute="leading" secondItem="208-ey-bVQ" secondAttribute="leading" constant="10" id="V3m-n5-5Zx"/>
                                                             <constraint firstAttribute="bottom" secondItem="7XF-Mx-zhh" secondAttribute="bottom" constant="20" id="W74-iG-RdG"/>
-                                                            <constraint firstItem="7XF-Mx-zhh" firstAttribute="top" secondItem="3ED-A4-Yjr" secondAttribute="bottom" constant="20" id="jUi-sl-wwT"/>
+                                                            <constraint firstItem="7XF-Mx-zhh" firstAttribute="top" secondItem="3ED-A4-Yjr" secondAttribute="bottom" constant="8" id="jUi-sl-wwT"/>
                                                             <constraint firstItem="3ED-A4-Yjr" firstAttribute="top" secondItem="208-ey-bVQ" secondAttribute="top" constant="20" id="zMl-Q9-i80"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
@@ -501,7 +498,7 @@ Ultimately, a good weather app offers convenience, timely information, and perso
                                                     <action selector="didBackBtnTap:" destination="pUV-dZ-pe5" eventType="touchUpInside" id="FIX-YM-pGq"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TiH-0B-Dlu">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TiH-0B-Dlu">
                                                 <rect key="frame" x="55" y="25.666666666666671" width="278" height="19"/>
                                                 <color key="tintColor" name="App_Blue"/>
                                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
@@ -553,55 +550,70 @@ Ultimately, a good weather app offers convenience, timely information, and perso
                                         <rect key="frame" x="0.0" y="80" width="393" height="679"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgL-Tu-sss">
-                                                <rect key="frame" x="20" y="20" width="353" height="21"/>
+                                                <rect key="frame" x="20.000000000000004" y="20" width="44.333333333333343" height="21"/>
                                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="o3s-ED-Tf8">
+                                                <rect key="frame" x="323" y="5.6666666666666572" width="50" height="50"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="cfo-dJ-Dcu"/>
+                                                    <constraint firstAttribute="width" constant="50" id="pAy-he-keT"/>
+                                                </constraints>
+                                            </imageView>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="npU-3I-Sr8">
-                                                <rect key="frame" x="10" y="51" width="373" height="148"/>
+                                                <rect key="frame" x="10" y="71" width="373" height="90"/>
                                                 <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="only_Sky" translatesAutoresizingMaskIntoConstraints="NO" id="ujL-BG-439">
+                                                        <rect key="frame" x="0.0" y="0.0" width="373" height="90"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location" translatesAutoresizingMaskIntoConstraints="NO" id="iGy-as-Sqt">
+                                                        <rect key="frame" x="10" y="20" width="20" height="20"/>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="20" id="DFl-6R-4Z4"/>
+                                                            <constraint firstAttribute="height" constant="20" id="c2p-sC-Mam"/>
+                                                        </constraints>
+                                                    </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qWI-Rr-oE4">
-                                                        <rect key="frame" x="10" y="20" width="353" height="19"/>
+                                                        <rect key="frame" x="35" y="20" width="44.666666666666657" height="20"/>
                                                         <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Vl-Td-E5g">
-                                                        <rect key="frame" x="10" y="49" width="50" height="50"/>
-                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="50" id="sS6-CC-Ucp"/>
-                                                            <constraint firstAttribute="width" constant="50" id="zDL-h5-g5w"/>
-                                                        </constraints>
-                                                    </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HKa-u3-oOA">
-                                                        <rect key="frame" x="90" y="47.333333333333343" width="263" height="53.666666666666657"/>
+                                                        <rect key="frame" x="299.33333333333331" y="18.333333333333339" width="53.666666666666686" height="53.666666666666657"/>
                                                         <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="48"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yoX-w6-q2g">
-                                                        <rect key="frame" x="10" y="109" width="353" height="19"/>
-                                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                                        <rect key="frame" x="10" y="53" width="69.666666666666671" height="17"/>
+                                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                                 <color key="backgroundColor" name="App_Blue"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="qWI-Rr-oE4" secondAttribute="trailing" constant="10" id="6uq-5C-Wm9"/>
-                                                    <constraint firstItem="yoX-w6-q2g" firstAttribute="leading" secondItem="qWI-Rr-oE4" secondAttribute="leading" id="HIP-Z3-yCq"/>
-                                                    <constraint firstItem="HKa-u3-oOA" firstAttribute="leading" secondItem="0Vl-Td-E5g" secondAttribute="trailing" constant="30" id="HsY-vj-QHi"/>
-                                                    <constraint firstItem="0Vl-Td-E5g" firstAttribute="centerY" secondItem="npU-3I-Sr8" secondAttribute="centerY" id="NfU-PC-RPh"/>
-                                                    <constraint firstItem="0Vl-Td-E5g" firstAttribute="leading" secondItem="qWI-Rr-oE4" secondAttribute="leading" id="R7O-g8-NTT"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ujL-BG-439" secondAttribute="trailing" id="6yL-jt-j5S"/>
+                                                    <constraint firstAttribute="bottom" secondItem="ujL-BG-439" secondAttribute="bottom" id="714-cw-oKY"/>
+                                                    <constraint firstItem="qWI-Rr-oE4" firstAttribute="leading" secondItem="iGy-as-Sqt" secondAttribute="trailing" constant="5" id="B71-J1-tKC"/>
+                                                    <constraint firstItem="iGy-as-Sqt" firstAttribute="bottom" secondItem="qWI-Rr-oE4" secondAttribute="bottom" id="BjO-B6-v5W"/>
+                                                    <constraint firstItem="ujL-BG-439" firstAttribute="top" secondItem="npU-3I-Sr8" secondAttribute="top" id="Eg7-iV-9hc"/>
+                                                    <constraint firstItem="HKa-u3-oOA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qWI-Rr-oE4" secondAttribute="trailing" constant="10" id="HUX-gB-SQ0"/>
                                                     <constraint firstItem="HKa-u3-oOA" firstAttribute="centerY" secondItem="npU-3I-Sr8" secondAttribute="centerY" id="VJB-xS-K0h"/>
                                                     <constraint firstItem="qWI-Rr-oE4" firstAttribute="top" secondItem="npU-3I-Sr8" secondAttribute="top" constant="20" id="Zrw-tn-d0u"/>
-                                                    <constraint firstItem="yoX-w6-q2g" firstAttribute="trailing" secondItem="qWI-Rr-oE4" secondAttribute="trailing" id="aK4-8R-wie"/>
+                                                    <constraint firstItem="yoX-w6-q2g" firstAttribute="trailing" secondItem="qWI-Rr-oE4" secondAttribute="trailing" id="e1C-Qs-Fkg"/>
                                                     <constraint firstAttribute="bottom" secondItem="yoX-w6-q2g" secondAttribute="bottom" constant="20" id="fNW-AE-dq6"/>
+                                                    <constraint firstAttribute="height" constant="90" id="faT-pm-hfq"/>
+                                                    <constraint firstItem="iGy-as-Sqt" firstAttribute="top" secondItem="qWI-Rr-oE4" secondAttribute="top" id="gfu-sR-XNE"/>
+                                                    <constraint firstItem="yoX-w6-q2g" firstAttribute="leading" secondItem="iGy-as-Sqt" secondAttribute="leading" id="iCc-DG-hAj"/>
+                                                    <constraint firstItem="ujL-BG-439" firstAttribute="leading" secondItem="npU-3I-Sr8" secondAttribute="leading" id="idj-Sa-Vgj"/>
                                                     <constraint firstAttribute="trailing" secondItem="HKa-u3-oOA" secondAttribute="trailing" constant="20" id="jjW-x8-6N3"/>
-                                                    <constraint firstItem="qWI-Rr-oE4" firstAttribute="leading" secondItem="npU-3I-Sr8" secondAttribute="leading" constant="10" id="mgb-ZE-kXn"/>
-                                                    <constraint firstItem="yoX-w6-q2g" firstAttribute="top" secondItem="0Vl-Td-E5g" secondAttribute="bottom" constant="10" id="pif-HB-GN6"/>
+                                                    <constraint firstItem="iGy-as-Sqt" firstAttribute="leading" secondItem="npU-3I-Sr8" secondAttribute="leading" constant="10" id="nni-yq-0ye"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -610,7 +622,7 @@ Ultimately, a good weather app offers convenience, timely information, and perso
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DyB-Ej-x5F">
-                                                <rect key="frame" x="343" y="219" width="30" height="30"/>
+                                                <rect key="frame" x="343" y="609" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="AiB-vi-Wu7"/>
                                                     <constraint firstAttribute="height" constant="30" id="gvc-3b-7mo"/>
@@ -628,13 +640,14 @@ Ultimately, a good weather app offers convenience, timely information, and perso
                                         <color key="backgroundColor" systemColor="viewFlipsideBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="bgL-Tu-sss" firstAttribute="leading" secondItem="F41-O3-8Um" secondAttribute="leading" constant="20" id="20T-8b-0eX"/>
-                                            <constraint firstItem="npU-3I-Sr8" firstAttribute="top" secondItem="bgL-Tu-sss" secondAttribute="bottom" constant="10" id="Cdq-Iv-wVS"/>
+                                            <constraint firstItem="npU-3I-Sr8" firstAttribute="top" secondItem="bgL-Tu-sss" secondAttribute="bottom" constant="30" id="Cdq-Iv-wVS"/>
+                                            <constraint firstAttribute="trailing" secondItem="o3s-ED-Tf8" secondAttribute="trailing" constant="20" id="O80-Tn-fox"/>
                                             <constraint firstItem="bgL-Tu-sss" firstAttribute="top" secondItem="F41-O3-8Um" secondAttribute="top" constant="20" id="SYa-dy-pzN"/>
                                             <constraint firstAttribute="trailing" secondItem="npU-3I-Sr8" secondAttribute="trailing" constant="10" id="Vme-uo-JPZ"/>
-                                            <constraint firstItem="DyB-Ej-x5F" firstAttribute="top" secondItem="npU-3I-Sr8" secondAttribute="bottom" constant="20" id="c1d-8W-6PO"/>
-                                            <constraint firstAttribute="trailing" secondItem="bgL-Tu-sss" secondAttribute="trailing" constant="20" id="glf-QH-d7N"/>
+                                            <constraint firstItem="o3s-ED-Tf8" firstAttribute="centerY" secondItem="bgL-Tu-sss" secondAttribute="centerY" id="beD-Vb-FpZ"/>
                                             <constraint firstAttribute="trailing" secondItem="DyB-Ej-x5F" secondAttribute="trailing" constant="20" id="lRv-K3-ro4"/>
                                             <constraint firstItem="npU-3I-Sr8" firstAttribute="leading" secondItem="F41-O3-8Um" secondAttribute="leading" constant="10" id="t4V-Y5-tVM"/>
+                                            <constraint firstAttribute="bottom" secondItem="DyB-Ej-x5F" secondAttribute="bottom" constant="40" id="uD2-tC-gUq"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -660,11 +673,11 @@ Ultimately, a good weather app offers convenience, timely information, and perso
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="cityName" destination="qWI-Rr-oE4" id="AKi-5W-Jpi"/>
+                        <outlet property="cityName" destination="qWI-Rr-oE4" id="bTN-9m-gJG"/>
                         <outlet property="dateLbl" destination="bgL-Tu-sss" id="eWS-xi-oqz"/>
-                        <outlet property="weatherDegree" destination="HKa-u3-oOA" id="gsg-Qf-GSD"/>
-                        <outlet property="weatherFeelslike" destination="yoX-w6-q2g" id="ira-Rh-Pcb"/>
-                        <outlet property="weatherImgView" destination="0Vl-Td-E5g" id="uJv-BP-9Qr"/>
+                        <outlet property="weatherDegree" destination="HKa-u3-oOA" id="Djk-Xg-hC3"/>
+                        <outlet property="weatherFeelslike" destination="yoX-w6-q2g" id="B6z-i9-U9G"/>
+                        <outlet property="weatherImgView" destination="o3s-ED-Tf8" id="MCO-En-nnf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JSE-CS-T5y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -796,7 +809,10 @@ Ultimately, a good weather app offers convenience, timely information, and perso
         <image name="clouds_Sun" width="512" height="512"/>
         <image name="current_location" width="512" height="512"/>
         <image name="home" width="512" height="512"/>
+        <image name="location" width="512" height="512"/>
         <image name="no-alarm" width="512" height="512"/>
+        <image name="only_Sky" width="852" height="360"/>
+        <image name="sky_potrait" width="408" height="612"/>
         <namedColor name="App_Blue">
             <color red="0.13699999451637268" green="0.6119999885559082" blue="0.85399997234344482" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
