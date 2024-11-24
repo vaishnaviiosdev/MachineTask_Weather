@@ -5,7 +5,7 @@ This is a simple weather app that fetches data from a weather API and displays t
 
 ### LaunchScreen Page 
 
-
+![Simulator Screenshot - iPhone SE (3rd generation) - 2024-11-24 at 21 00 00](https://github.com/user-attachments/assets/21cb9883-109e-482a-949b-281015cd0ed7)
 
 ### Initial Page
 
