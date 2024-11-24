@@ -47,7 +47,6 @@
 			children = (
 				2761703A2CF059B30036B30F /* Weather_Task */,
 				276170392CF059B30036B30F /* Products */,
-				59FC685F47128C3E2D624219 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,13 +56,6 @@
 				276170382CF059B30036B30F /* Weather_Task.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		59FC685F47128C3E2D624219 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,9 +146,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Weather_Task/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Weather;
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We need your location to fetch current location";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to show relevant content";
+				INFOPLIST_KEY_CFBundleDisplayName = "Find Weather";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We need your location to fetch your current location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to fetch your current location";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -186,9 +178,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Weather_Task/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Weather;
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We need your location to fetch current location";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to show relevant content";
+				INFOPLIST_KEY_CFBundleDisplayName = "Find Weather";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We need your location to fetch your current location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to fetch your current location";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

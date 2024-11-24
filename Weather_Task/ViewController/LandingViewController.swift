@@ -51,12 +51,12 @@ class LandingViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func didgetWeatherBtnTap(_ sender: Any) {
         guard let latitudeText = latitudeTxtfield.text, !latitudeText.isEmpty else {
-            self.showAlert(message: "Please enter a valid latitude.")
+            self.showAlert(message: "Please enter a latitude.")
             return
         }
                 
         guard let longitudeText = longitudeTxtfield.text, !longitudeText.isEmpty else {
-            self.showAlert(message: "Please enter a valid longitude.")
+            self.showAlert(message: "Please enter a longitude.")
             return
         }
         

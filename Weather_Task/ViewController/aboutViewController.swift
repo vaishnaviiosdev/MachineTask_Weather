@@ -27,7 +27,7 @@ class aboutViewController: UIViewController {
     
     func downloadImage(from url: URL) {
         let task = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
-            print("The response is \(data)")
+            print("The download image response is \(response)")
             if let data = data, let image = UIImage(data: data) {
                 DispatchQueue.main.async {
                     self?.imageView.image = image
@@ -39,7 +39,6 @@ class aboutViewController: UIViewController {
     }
     
     func cacheImage(_ image: UIImage, for url: URL) {
-        // Asynchronously download the image
         let fileName = url.lastPathComponent
         print("Caching image with file name: \(fileName)") 
         
@@ -50,7 +49,7 @@ class aboutViewController: UIViewController {
             if let data = image.jpegData(compressionQuality: 1.0) {
                 do {
                     try data.write(to: fileURL)
-                    print("Image cached successfully at: \(fileURL.path)") //
+                    print("Image cached successfully at: \(fileURL.path)")
                 }
                 catch {
                     print("Error caching image: \(error.localizedDescription)")
@@ -62,7 +61,7 @@ class aboutViewController: UIViewController {
         }
     }
     
-    //Mark :- Button Action
+    //Mark:- Button Action
     @IBAction func didBackBtnTap(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }

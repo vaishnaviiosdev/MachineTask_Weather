@@ -69,20 +69,18 @@ class ResultViewController: UIViewController, CLLocationManagerDelegate {
                     let feels_Like = firstItem.main.feels_like
                     let timestamp = firstItem.dt_txt
                     let weather = firstItem.weather.first
-                    let icon = weather?.icon ?? ""
                     let main = weather?.main ?? ""
-                    let description = weather?.description ?? ""
                     let formattedDate = self.getFormattedDate(from: timestamp)
                     
                     // Update UI elements on the main thread
                     DispatchQueue.main.async {
                         self.dateLbl.text = formattedDate
                         self.cityName.text = cityName
-                        self.setWeatherIcon(for: main)
                         let roundedTemperature = Int(round(temperature))
                         self.weatherDegree.text = "\(roundedTemperature)°C"
                         let roundedFeelsLike = Int(round(feels_Like))
                         self.weatherFeelslike.text = "Feels Like" + " " + "\(roundedFeelsLike)°C"
+                        self.setWeatherIcon(for: main)
                     }
                 }
             }
@@ -101,7 +99,7 @@ class ResultViewController: UIViewController, CLLocationManagerDelegate {
             iconName = "cloud.rain.fill"
         case "clear":
             iconName = "sun.max.fill"
-        case "cloud":
+        case "clouds":
             iconName = "cloud.fill"
         case "snow":
             iconName = "cloud.snow.fill"
@@ -117,7 +115,7 @@ class ResultViewController: UIViewController, CLLocationManagerDelegate {
         
         if let date = inputDateFormatter.date(from: dateString) {
             let outputDateFormatter = DateFormatter()
-            outputDateFormatter.dateFormat = "dd MMM yyyy, hh:mm a"//"dd-MM-yy, EEEE"   // Output format with day
+            outputDateFormatter.dateFormat = "dd MMM yyyy, EEEE"  // Output format with day
             let formattedDate = outputDateFormatter.string(from: date)
             print("The formattedDate is \(formattedDate)")
             return formattedDate
@@ -175,6 +173,10 @@ class ResultViewController: UIViewController, CLLocationManagerDelegate {
     @IBAction func didNotificationBtnTap(_ sender: Any) {
         let notificationVC = storyBd.instantiateViewController(withIdentifier: "NotificationViewController") as! NotificationViewController
         self.navigationController?.pushViewController(notificationVC, animated: true)
+    }
+    
+    @IBAction func didEditBtnTap(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func didBackBtnTap(_ sender: Any) {

@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,17 +17,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sky_potrait" translatesAutoresizingMaskIntoConstraints="NO" id="3Jx-pN-6Cr">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
-                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wNI-nF-dek">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clouds_Sun" translatesAutoresizingMaskIntoConstraints="NO" id="Mef-j1-W9l">
+                                        <rect key="frame" x="96.666666666666686" y="286" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="EM6-ZO-5lN"/>
+                                            <constraint firstAttribute="width" constant="200" id="Qre-bo-oYZ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find Weather" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBc-6G-BPz">
+                                        <rect key="frame" x="20" y="506" width="353" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="6Ee-Ch-aoq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="App_Blue"/>
+                                <constraints>
+                                    <constraint firstItem="CBc-6G-BPz" firstAttribute="centerX" secondItem="Mef-j1-W9l" secondAttribute="centerX" id="0zG-u8-JGb"/>
+                                    <constraint firstItem="CBc-6G-BPz" firstAttribute="leading" secondItem="wNI-nF-dek" secondAttribute="leading" constant="20" id="GZI-ex-tFg"/>
+                                    <constraint firstItem="Mef-j1-W9l" firstAttribute="centerX" secondItem="wNI-nF-dek" secondAttribute="centerX" id="M0u-2t-a1e"/>
+                                    <constraint firstItem="Mef-j1-W9l" firstAttribute="centerY" secondItem="wNI-nF-dek" secondAttribute="centerY" constant="-40" id="gyD-JO-YA8"/>
+                                    <constraint firstItem="CBc-6G-BPz" firstAttribute="top" secondItem="Mef-j1-W9l" secondAttribute="bottom" constant="20" id="icc-Ks-C3q"/>
+                                    <constraint firstAttribute="trailing" secondItem="CBc-6G-BPz" secondAttribute="trailing" constant="20" id="o4J-xh-caq"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="App_Blue"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3Jx-pN-6Cr" secondAttribute="bottom" id="Ejw-Jm-fIU"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Jx-pN-6Cr" secondAttribute="trailing" id="ovq-YN-xoe"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="3Jx-pN-6Cr" secondAttribute="top" id="q2r-7o-owQ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="3Jx-pN-6Cr" secondAttribute="leading" id="r7F-7Y-k1a"/>
+                            <constraint firstItem="wNI-nF-dek" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Dsq-rH-idj"/>
+                            <constraint firstAttribute="bottom" secondItem="wNI-nF-dek" secondAttribute="bottom" id="Zxu-5e-nDG"/>
+                            <constraint firstItem="wNI-nF-dek" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="cLk-Gp-kvI"/>
+                            <constraint firstItem="wNI-nF-dek" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="lUa-QN-MaJ"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -36,6 +64,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="sky_potrait" width="408" height="612"/>
+        <image name="clouds_Sun" width="512" height="512"/>
+        <namedColor name="App_Blue">
+            <color red="0.40854955028559831" green="0.69541147460058561" blue="0.85399997234344482" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
     </resources>
 </document>
