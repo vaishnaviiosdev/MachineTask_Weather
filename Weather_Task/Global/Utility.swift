@@ -14,9 +14,8 @@ extension NSObject {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Settings", style: .default, handler: {(cAlertAction) in
             //Redirect to Settings app
-            UIApplication.shared.open(URL(string:UIApplication.openSettingsURLString)!)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                exit(1)
+            if let settingsURL = URL(string: UIApplication.openSettingsURLString) {
+                UIApplication.shared.open(settingsURL)
             }
         })
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
@@ -24,7 +23,7 @@ extension NSObject {
         alertController.addAction(cancelAction)
         TopMostViewController().present(alertController, animated: true, completion: nil)
     }
-    
+        
     public func TopMostViewController() -> UIViewController {
         return self.TopMostViewController(withRootViewController: (UIApplication.shared.keyWindow?.rootViewController!)!)
     }
