@@ -39,9 +39,8 @@ class ResultViewController: UIViewController, CLLocationManagerDelegate {
             return
         }
 
-        let task = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
-        guard let self = self else { return }  // Unwrap self safely
-
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+        
             if let error = error {
                 print("Error fetching weather data: \(error)")
                 return
@@ -52,7 +51,7 @@ class ResultViewController: UIViewController, CLLocationManagerDelegate {
                 return
             }
             
-            if let rawResponse = String(data: data, encoding: .utf8) {
+            if let rawResponse = String(data: data, encoding: .utf8) { //Convert the data into human-readable format
                 print("Raw response: \(rawResponse)")
             }
             else {
@@ -62,7 +61,8 @@ class ResultViewController: UIViewController, CLLocationManagerDelegate {
             do { // Parse the JSON response
                 let decoder = JSONDecoder()
                 let weatherResponse = try decoder.decode(WeatherResponse.self, from: data)
-
+                print("The weatherResponse is \(weatherResponse)")
+                
                 if let firstItem = weatherResponse.list.first {
                     let cityName = weatherResponse.city.name
                     let temperature = firstItem.main.temp

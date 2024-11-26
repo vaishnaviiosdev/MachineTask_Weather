@@ -20,19 +20,27 @@ class aboutViewController: UIViewController {
     }
     
     func loadContent() {
-        if let url = URL(string: imageUrlString) {
+        if let url = URL(string: imageUrlString) { //Safely Unwrap
+            print("The imageurlstring is \(imageUrlString)")
+            print("The url is \(url)")
             downloadImage(from: url)
+        }
+        else {
+            print("The url is nil")
         }
     }
     
     func downloadImage(from url: URL) {
-        let task = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
-            print("The download image response is \(response)")
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            print("The download image data and response is \(data) and \(response)")
             if let data = data, let image = UIImage(data: data) {
                 DispatchQueue.main.async {
-                    self?.imageView.image = image
+                    self.imageView.image = image
                 }
-                self?.cacheImage(image, for: url)
+                self.cacheImage(image, for: url)
+            }
+            else {
+                print("The data is nil")
             }
         }
         task.resume()
@@ -43,6 +51,7 @@ class aboutViewController: UIViewController {
         print("Caching image with file name: \(fileName)") 
         
         if let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            print("The documentDirectory is \(documentDirectory)")
             let fileURL = documentDirectory.appendingPathComponent(fileName)
             
             // Save the image to disk
